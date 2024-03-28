@@ -1,0 +1,12 @@
+import tkinter as tk
+from tkinter import ttk
+from tkinter import messagebox
+import sqlite3 as sql
+
+tasks=[]
+task_string=task_field.get()
+if len(task_string)==0:
+  messagebox.showinfo('Error','Feildn is empty.')
+else:
+  tasks.append(task_string)
+  th_cursor.execute('insert inot tasks values (?)',(task_string,))
